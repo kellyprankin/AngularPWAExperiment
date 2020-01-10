@@ -1,0 +1,5 @@
+<h3>Experimental PWA App</h3>
+
+<div *ngIf="currentConnectionStatus$ | async as currentConnectionStatus">
+  Network Connection Status: {{ currentConnectionStatus.isNetworkAccessible }}
+</div>
