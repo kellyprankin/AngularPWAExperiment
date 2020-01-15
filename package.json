@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run build && http-server -S -C ssl/app-cert.pem -o -K ssl/app-key.pem -a localhost -p 8888 -c-1 ./dist/angular-latest-test/",
+    "start": "ng serve -o",
+    "start-pwa": "npm run build && http-server -S -C ssl/app-cert.pem -o -K ssl/app-key.pem -a localhost -p 8888 -c-1 ./dist/angular-latest-test/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -30,10 +31,11 @@
     "@angular/cli": "~9.0.0-rc.8",
     "@angular/compiler-cli": "~9.0.0-rc.8",
     "@angular/language-service": "~9.0.0-rc.8",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "cypress": "^3.8.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
