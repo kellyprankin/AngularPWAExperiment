@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
-    "start-pwa": "npm run build && http-server -S -C ssl/app-cert.pem -o -K ssl/app-key.pem -a localhost -p 8888 -c-1 ./dist/angular-latest-test/",
-    "build": "ng build",
+    "start": "npm run build && http-server -S -C ssl/app-cert.pem -o -K ssl/app-key.pem -a localhost -p 8888 -c-1 ./dist/angular-latest-test/",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "cypress run"

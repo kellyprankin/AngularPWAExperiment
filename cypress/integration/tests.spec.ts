@@ -5,7 +5,7 @@ context('Actions', () => {
   });
 
   it('App should load', () => {
-    cy.visit('http://localhost:4200');
+    cy.visit('https://localhost:8888');
 
     cy
       .title()
